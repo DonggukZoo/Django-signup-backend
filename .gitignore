@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Virtual env
+venv/
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Migrations
+*/migrations/*.py
+*/migrations/*.pyc
