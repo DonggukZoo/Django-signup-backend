@@ -4,7 +4,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.utils.translation import gettext_lazy as _
 
-# 커스텀 매니저 (사용자 생성 로직을 관리)
+# 커스텀 매니저
 class CustomUserManager(BaseUserManager):
     def create_user(self, student_id, password=None, **extra_fields):
         if not student_id:
@@ -34,7 +34,6 @@ class CustomUserManager(BaseUserManager):
 # 커스텀 사용자 모델
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     USER_TYPE_CHOICES = (
-        # '대여하는 사람'을 '대여해주는 사람'으로 수정
         ('lender', '대여해주는 사람'),
         ('borrower', '대여하려는 사람'),
     )
