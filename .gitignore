@@ -1,17 +1,23 @@
-# Python
-__pycache__/
-*.py[cod]
-*.sqlite3
+# Django-signup-backend/.gitignore
 
-# Virtual env
+# Virtual environment
 venv/
+.env
 
-# VSCode
+# Database
+db.sqlite3
+
+# Python-related files
+__pycache__/
+*.pyc
+
+# Django-specific files
+/static/
+/media/
+
+# IDE-specific files
+.idea/
 .vscode/
 
-# macOS
-.DS_Store
-
-# Migrations
-*/migrations/*.py
-*/migrations/*.pyc
+# Logs
+*.log
